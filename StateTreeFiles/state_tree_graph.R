@@ -45,13 +45,6 @@ tool_exec<- function(in_params, out_params){
   # add versions to state data
   state.data <- rbind(state.data, version.data)
   
-  # dimensions
-  n.states = length(unique(state.data$vertex))
-  n.versions  = dim(version.data)[1]
-  n.verts = n.states + n.versions 
-  message("Number of states ", n.states)
-  message("Number of versions ", n.versions)
-  
   # colors and name for symbology
   state.data$color <- adjustcolor("gray40", alpha.f = 0.2)
   state.data$category <- "Compressible state"
@@ -69,6 +62,13 @@ tool_exec<- function(in_params, out_params){
   # remove extra vertices
   state.data <- state.data[!duplicated(state.data[1:2]), ]
   
+  # dimensions
+  n.states = dim(state.data[state.data$type=="state", ])[1]
+  n.versions  = dim(state.data[state.data$type=="version", ])[1]
+  n.verts = n.states + n.versions 
+  message("Number of states ", n.states)
+  message("Number of versions ", n.versions)
+  
   #####################################################################################################
   ### Create igraph network diagram 
   #####################################################################################################
@@ -84,7 +84,7 @@ tool_exec<- function(in_params, out_params){
   if(n.verts>100000) warning(paste("There are", n.verts,
                                    "vertices. The diagram may take",
                                    "a long time to render.\n"))
-  
+
   state_graph_layout <- layout_as_tree(state_diagram, circular = F)
   
   # graph aspect
@@ -109,7 +109,7 @@ tool_exec<- function(in_params, out_params){
   #####################################################################################################
   ### Outputs
   #####################################################################################################
-  
+
   arc.progress_label("Creating outputs")
   arc.progress_pos(60)
   
@@ -234,7 +234,7 @@ tool_exec<- function(in_params, out_params){
       text(x=rescale(state_graph_layout[, 1], -1, 1) + x_adj,
            y=rescale(state_graph_layout[, 2], -1, 1) + y_adj,
            labels=V(state_diagram)$name,
-           cex=point_size*.85,
+           cex=point_size*.88,
            col="black",
            family="sans",
            srt=V(state_diagram)$lab_rotation[1],
@@ -266,7 +266,7 @@ scale_point_size <- function(base_size){
     point_size = 10
   } else {
     # fit some test sizes with a linear model on a log, log scale - seems to work.
-    point_size = exp(5.1 + -0.9764906*log(base_size))
+    point_size = exp(5.21 + -log(base_size))
   } 
   return(point_size)
 }
