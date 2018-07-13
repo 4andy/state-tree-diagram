@@ -11,7 +11,7 @@ This tool provides three ways to visualize SDE database version states and their
 3. Select one or more of the desired output formats.
 4. Click Run or OK.  (The first time the model runs it will install the needed external packages).
 ### Notes
-* The diagram features are added to the current map without a spatial reference and centered near 0, 0.  This seems to work fine with an empty Document in ArcMap or the default Web Mercator projection in ArcGIS Pro.  In some cases, it may be necessary to zoom to the features to view the diagram and experiences with other spatial references and projections may vary.
+* The diagram features are added to the current map without a spatial reference and centered near 0, 0.  This seems to work fine with an empty map document in ArcMap or a map with default Web Mercator projection in ArcGIS Pro.  In some cases, it may be necessary to zoom to the features to view the diagram and experiences with other spatial references and projections may vary.
 * The default symbology and labels of the created features can be changed in ArcMap by symbolizing a diagram as desired and saving layer files over the default files stored in the StateTreeFiles folder.
 ### Known limitations
 * If the Y dimension of the diagram is very large ArcMap or ArcGIS Pro will crash.
