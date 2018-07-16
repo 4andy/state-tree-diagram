@@ -15,3 +15,4 @@ This tool provides three ways to visualize SDE database version states and their
 * The default symbology and labels of the created features can be changed in ArcMap by symbolizing a diagram as desired and saving layer files over the default files stored in the StateTreeFiles folder.
 ### Known limitations
 * If the Y dimension of the diagram is very large ArcMap or ArcGIS Pro will crash.
+* Please report any issues!
