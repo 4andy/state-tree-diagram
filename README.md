@@ -3,10 +3,10 @@ This tool provides three ways to visualize SDE database version states and their
 ### Requirements
 * [R 3.3.2 or later](http://cran.cnr.berkeley.edu/bin/windows/base/).
 * [ArcGIS 10.3.1 or later](http://desktop.arcgis.com/en/desktop/) or [ArcGIS Pro 1.1 or later](http://pro.arcgis.com/en/pro-app/).
-* [The R-ArcGIS bridge](https://r-arcgis.github.io/). [Install with ArcGIS Pro](https://learn.arcgis.com/en/projects/analyze-crime-using-statistics-and-the-r-arcgis-bridge/lessons/install-the-r-arcgis-bridge-and-start-statistical-analysis.htm#ESRI_SECTION1_D4D9FAD231DC4FA287EECCBEC4A11723) (Note: At step 3 be patient as it takes a moment for the home directories list to be populated) or [follow the instructions](https://github.com/R-ArcGIS/r-bridge-install) for installing offline or with ArcMap.
+* [The R-ArcGIS bridge](https://r-arcgis.github.io/). [Install with ArcGIS Pro](https://learn.arcgis.com/en/projects/identify-an-ecological-niche-for-african-buffalo/lessons/install-the-r-arcgis-bridge-and-locate-data-for-analysis.htm#ESRI_SECTION1_21D77DC37E6848EEA6C4AEDE51D87386) (Note: At step 3 be patient as it takes a moment for the home directories list to be populated) or [follow the instructions](https://github.com/R-ArcGIS/r-bridge-install) for installing offline or with ArcMap.
 * Download and unzip a copy of this repository in a convenient location.  The StateTreeFiles folder must remain in the same location relative to the toolbox.
 ### Running the tool
-1. In ArcGIS Pro or ArcMap browse to the folder and open the Create_State_Diagram toolbox in the catalog window and open the Create state tree diagram model.
+1. In ArcGIS Pro or ArcMap browse to the repository folder and open the Create_State_Diagram toolbox in the catalog window and open the Create state tree diagram model.
 2. Browse to the desired database connection file - note: the connection must use geodatabase administrator credentials.
 3. Select one or more of the desired output formats.
 4. Click Run or OK.  (The first time the model runs it will install the needed external packages).
