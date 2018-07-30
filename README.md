@@ -1,7 +1,7 @@
 # Create geodatabase state tree diagram
 This tool provides three ways to visualize SDE database version states and their relationships in ArcGIS desktop.
 ### Installation (quick and easy)
-* Install [R 3.3.2 or later](http://cran.cnr.berkeley.edu/bin/windows/base/).
+* As needed install [R 3.3.2 or later](http://cran.cnr.berkeley.edu/bin/windows/base/).
 * Install [The R-ArcGIS bridge](https://r-arcgis.github.io/). [Install with ArcGIS Pro](https://learn.arcgis.com/en/projects/analyze-crime-using-statistics-and-the-r-arcgis-bridge/lessons/install-the-r-arcgis-bridge-and-start-statistical-analysis.htm#ESRI_SECTION1_D4D9FAD231DC4FA287EECCBEC4A11723) (Note: At step 3 be patient as it takes a moment for the home directories list to be populated) or [follow the instructions](https://github.com/R-ArcGIS/r-bridge-install) for installing offline or with ArcMap.
 * Download and unzip a copy of this repository in a convenient location.  The StateTreeFiles folder must remain in the same location relative to the toolbox.
 ### Running the tool
