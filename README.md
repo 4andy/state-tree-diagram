@@ -2,7 +2,7 @@
 This tool provides three ways to visualize SDE database version states and their relationships in ArcGIS desktop.
 ### Setup (quick and easy)
 As needed:
-1. install [R 3.3.2 or later](http://cran.cnr.berkeley.edu/bin/windows/base/).
+1. Install [R 3.3.2 or later](http://cran.cnr.berkeley.edu/bin/windows/base/).
 2. Install The R-ArcGIS bridge.
   * It's easy to install with ArcGIS Pro via geoprocessing settings
 
