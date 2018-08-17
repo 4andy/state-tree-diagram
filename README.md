@@ -1,12 +1,12 @@
 # Create geodatabase state tree diagram
 This tool provides three ways to visualize SDE database version states and their relationships in ArcGIS desktop.
 ### Setup (quick and easy)
-* As needed
-  1. install [R 3.3.2 or later](http://cran.cnr.berkeley.edu/bin/windows/base/).
-  2. Install [The R-ArcGIS bridge](https://r-arcgis.github.io/).
-    * It's easy to [install with ArcGIS Pro](https://learn.arcgis.com/en/projects/analyze-crime-using-statistics-and-the-r-arcgis-bridge/lessons/install-the-r-arcgis-bridge-and-start-statistical-analysis.htm#ESRI_SECTION1_D4D9FAD231DC4FA287EECCBEC4A11723) (be patient at step 3 be patient as it takes a moment for the home directories list to be populated).
-    * Or, [follow the instructions](https://github.com/R-ArcGIS/r-bridge-install) for installing offline or with ArcMap.
-* Download and unzip a copy of this repository in a convenient location.
+As needed:
+1. install [R 3.3.2 or later](http://cran.cnr.berkeley.edu/bin/windows/base/).
+2. Install [The R-ArcGIS bridge](https://r-arcgis.github.io/).
+  * It's easy to [install with ArcGIS Pro](https://learn.arcgis.com/en/projects/analyze-crime-using-statistics-and-the-r-arcgis-bridge/lessons/install-the-r-arcgis-bridge-and-start-statistical-analysis.htm#ESRI_SECTION1_D4D9FAD231DC4FA287EECCBEC4A11723) (be patient at step 3 be patient as it takes a moment for the home directories list to be populated).
+  * Or, [follow the instructions](https://github.com/R-ArcGIS/r-bridge-install) for installing offline or with ArcMap.
+3. Download and unzip a copy of this repository in a convenient location.
 ### Running the tool
 1. In ArcGIS Pro or ArcMap browse to the repository folder and open the Create_State_Diagram toolbox in the catalog window and open the Create state tree diagram model.
 2. Browse to the desired database connection file - note: the connection must use geodatabase administrator credentials.
