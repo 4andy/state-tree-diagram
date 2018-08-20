@@ -8,7 +8,7 @@ As needed:
 
   ![](https://raw.githubusercontent.com/4andy/state-tree-diagram/master/StateTreeFiles/pro.png)
 
-   ([stepwise directions](https://learn.arcgis.com/en/projects/analyze-crime-using-statistics-and-the-r-arcgis-bridge/lessons/install-the-r-arcgis-bridge-and-start-statistical-analysis.htm#ESRI_SECTION1_D4D9FAD231DC4FA287EECCBEC4A11723), be patient at step 3 be patient as it takes a moment for the home directories list to be populated).
+   ([stepwise directions](https://learn.arcgis.com/en/projects/analyze-crime-using-statistics-and-the-r-arcgis-bridge/lessons/install-the-r-arcgis-bridge-and-start-statistical-analysis.htm#ESRI_SECTION1_D4D9FAD231DC4FA287EECCBEC4A11723), be patient at step 3 be patient as it takes a moment for the home directories list to be populated.  Also, ArcGIS Pro will need to be restarted after insalling the R-ArcGIS bridge.).
   * Or, [follow the instructions](https://github.com/R-ArcGIS/r-bridge-install) for installing offline or with ArcMap.
 
 3. Download and unzip a copy of this repository in a convenient location (top right green button).
