@@ -28,7 +28,8 @@ As needed:
 * The diagram features are added to the current map without a spatial reference and centered near 0, 0.  This seems to work fine with an empty map document in ArcMap or a map with default Web Mercator projection in ArcGIS Pro.  In some cases, it may be necessary to zoom to the features to view the diagram and experiences with other spatial references and projections may vary.
 * The default symbology and labels of the created features can be changed in ArcMap by symbolizing a diagram as desired and saving layer files over the default files stored in the StateTreeFiles folder.
 ### Known limitations
-* If the Y dimension of the diagram is very large ArcMap or ArcGIS Pro will crash.
+* If the Y dimension of the diagram is very large, ArcMap or ArcGIS Pro may crash.
+* If the diagram is lacking some of the possible state catagroies, the symbology may be shifted in ArcGIS Pro.
 * Please report any issues!
 ### Links
 *  [The R-ArcGIS bridge](https://r-arcgis.github.io/)
