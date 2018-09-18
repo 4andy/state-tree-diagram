@@ -29,7 +29,7 @@ As needed:
 * The default symbology and labels of the features in ArcMap or ArcGIS Pro can be changed in ArcMap by symbolizing a diagram as desired and saving layer files over the default files stored in the StateTreeFiles folder.
 ### Known limitations
 * If the Y dimension of the diagram is very large, ArcMap or ArcGIS Pro may crash.
-* If the diagram is lacking some of the possible state catagroies, the symbology may be shifted in ArcGIS Pro.
+* If the diagram is lacking some of the possible state categories, the symbology may be shifted in ArcGIS Pro.
 * Please report any issues!
 ### Links
 *  [The R-ArcGIS bridge](https://r-arcgis.github.io/)
