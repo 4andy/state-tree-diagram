@@ -14,7 +14,7 @@ As needed:
 3. Download and unzip a copy of this repository in a convenient location (top right green button).
 
 ### Running the tool
-1. In ArcGIS Pro or ArcMap browse to the repository folder and open the Create_State_Diagram toolbox in the catalog window and open the Create state tree diagram model.
+1. In ArcGIS Pro or ArcMap, browse to the repository folder and open the Create_State_Diagram toolbox in the catalog window and open the Create state tree diagram model.
 
 ![](https://github.com/4andy/state-tree-diagram/blob/master/StateTreeFiles/model.png)
 
