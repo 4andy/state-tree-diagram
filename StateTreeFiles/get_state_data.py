@@ -18,7 +18,7 @@ arcpy.AddMessage(tmpdir)
 instance = arcpy.Describe(sdefile).connectionProperties.instance
 
 # set column names
-columns = ['parent', 'vertex', 'version', 'lineage']
+columns = ['parent', 'vertex', 'version', 'owner', 'lineage']
 
 # open database connection
 con = arcpy.ArcSDESQLExecute(sdefile)
@@ -30,6 +30,7 @@ try:
         sql = ("""SELECT parent_state_id
                , states.state_id
                , name AS version
+               , versions.owner
                , lineage_name
                FROM sde.states LEFT JOIN sde.versions
                ON states.state_id = versions.state_id
@@ -40,6 +41,7 @@ try:
             sql = ("""SELECT parent_state_id
                       , sde_states.state_id
                       , name AS version
+                      , sde_versions.owner
                       , lineage_name
                       FROM sde.sde_states LEFT JOIN sde.sde_versions
                       ON sde_states.state_id = sde_versions.state_id
@@ -50,6 +52,7 @@ try:
             sql = ("""SELECT parent_state_id
                       , sde_states.state_id
                       , name AS version
+                      , sde_versions.owner
                       , lineage_name
                       FROM dbo.sde_states LEFT JOIN dbo.sde_versions
                       ON sde_states.state_id = sde_versions.state_id

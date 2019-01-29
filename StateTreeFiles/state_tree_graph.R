@@ -33,12 +33,19 @@ tool_exec<- function(in_params, out_params){
   state.data <- read.csv(paste0(temp_folder, "\\data.csv"), stringsAsFactors = F)
   state.data$type <- "state"
   
+  #correct duplicate version names with version owner
+  duplicated.versions <- state.data$version[which(duplicated(state.data$version, incomparables = c("")))]
+  with.matches <- which(state.data$version %in% duplicated.versions)
+  version.owner <- with(state.data[with.matches, ], paste0(version, ".", owner))
+  state.data$version[with.matches] <- version.owner
+  
   # extract versions and rearrange as vertices
   version.data <- state.data[state.data$version!="", ]
   version.data <- with(version.data,
                        data.frame(parent=vertex,
                                   vertex=version,
                                   version="",
+                                  owner="",
                                   lineage=lineage,
                                   type="version"))
   
