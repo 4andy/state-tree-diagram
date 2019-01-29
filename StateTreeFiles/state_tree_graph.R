@@ -146,13 +146,13 @@ tool_exec<- function(in_params, out_params){
       Lines(Line(cbind(x,y)), ID=state.data$vertex[i])
     })
     edge.features <- SpatialLinesDataFrame(SpatialLines(edges),
-                                           state.data[-c(3,6)],
+                                           state.data[-c(3,4,7)],
                                            match.ID=F)
     arc.write(paste0(temp_folder, "\\Relationships.shp"), edge.features)
     
     # vertices to spatial dataframe and save
     coordinates(state.data) <- ~x+y
-    arc.write(paste0(temp_folder, "\\Vertices.shp"), state.data[-c(3,6)])
+    arc.write(paste0(temp_folder, "\\Vertices.shp"), state.data[-c(3,4,7)])
   }
   
   arc.progress_pos(70)
