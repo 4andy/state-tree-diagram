@@ -148,11 +148,18 @@ tool_exec<- function(in_params, out_params){
     edge.features <- SpatialLinesDataFrame(SpatialLines(edges),
                                            state.data[-c(3,4,7)],
                                            match.ID=F)
-    arc.write(paste0(temp_folder, "\\Relationships.shp"), edge.features, validate=T)
-    
     # vertices to spatial dataframe and save
     coordinates(state.data) <- ~x+y
-    arc.write(paste0(temp_folder, "\\Vertices.shp"), state.data[-c(3,4,7)], validate=T)
+    
+    # safely try to save the features
+    tryCatch({
+      arc.write(paste0(temp_folder, "\\Relationships.shp"), edge.features, validate=T)
+      arc.write(paste0(temp_folder, "\\Vertices.shp"), state.data[-c(3,4,7)], validate=T)
+    }, error = function(e) {
+      warning("Unalbe to create features")
+      warning(paste("Error:", e))
+    })
+
   }
   
   arc.progress_pos(70)
