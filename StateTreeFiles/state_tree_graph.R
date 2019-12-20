@@ -124,12 +124,12 @@ tool_exec<- function(in_params, out_params){
     message("Creating features")
     
     # rescale coordinates to desired aspect
-    if (asp > 1){
-      scale_y_factor = (max_range/range_y)
-      scale_x_factor =(max_range/range_x) * (1/asp)
-    } else {
+    if (asp < 1){
       scale_y_factor = (max_range/range_y) * asp
       scale_x_factor =(max_range/range_x)
+    } else {
+      scale_y_factor = (max_range/range_y)
+      scale_x_factor =(max_range/range_x) * (1/asp)
     }
     state.data$x <- state_graph_layout[, 1] * scale_x_factor
     state.data$y <- state_graph_layout[, 2] * scale_y_factor
@@ -148,11 +148,11 @@ tool_exec<- function(in_params, out_params){
     edge.features <- SpatialLinesDataFrame(SpatialLines(edges),
                                            state.data[-c(3,4,7)],
                                            match.ID=F)
-    arc.write(paste0(temp_folder, "\\Relationships.shp"), edge.features)
+    arc.write(paste0(temp_folder, "\\Relationships.shp"), edge.features, validate=T)
     
     # vertices to spatial dataframe and save
     coordinates(state.data) <- ~x+y
-    arc.write(paste0(temp_folder, "\\Vertices.shp"), state.data[-c(3,4,7)])
+    arc.write(paste0(temp_folder, "\\Vertices.shp"), state.data[-c(3,4,7)], validate=T)
   }
   
   arc.progress_pos(70)
@@ -204,14 +204,14 @@ tool_exec<- function(in_params, out_params){
       y_adj = 0
       
       # scale paper size to allow for zooming and aspect correction
-      if (asp > 1){
-        height = 100
-        width = (100 + point_size*10) * (1/asp)
-        x_adj = point_size*.012
-      } else {
+      if (asp < 1){
         height = (100 + point_size*10) * asp
         width = 100
         y_adj = -point_size*.018
+      } else {
+        height = 100
+        width = (100 + point_size*10) * (1/asp)
+        x_adj = point_size*.012
       }
       
       # path for pdf file
